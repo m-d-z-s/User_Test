@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -17,14 +11,10 @@ namespace User_Test
         internal List<User> users = new List<User>();
         int flag;
         Random rnd = new Random();
+        
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
         }
 
         private void radioButton1_Click(object sender, EventArgs e)
@@ -32,7 +22,7 @@ namespace User_Test
             string s = "";
             for(int i = 0; i < 5; i++)
             {
-                s =s + Convert.ToString(Convert.ToChar(rnd.Next(97, 123)));
+                s += Convert.ToString(Convert.ToChar(rnd.Next(97, 123)));
             }
             textBox3.Text = s;
         }
@@ -45,11 +35,11 @@ namespace User_Test
                 flag = rnd.Next(0, 2);
                 if (flag == 0)
                 {
-                    s = s + Convert.ToString(rnd.Next(0, 9));
+                    s += Convert.ToString(rnd.Next(0, 9));
                 }
                 else if (flag == 1)
                 {
-                    s = s + Convert.ToString(Convert.ToChar(rnd.Next(97, 123)));
+                    s += Convert.ToString(Convert.ToChar(rnd.Next(97, 123)));
                 }
             }
             textBox3.Text = s;
@@ -63,15 +53,15 @@ namespace User_Test
                 flag = rnd.Next(0, 3);
                 if (flag == 0)
                 {
-                    s = s + Convert.ToString(rnd.Next(0, 9));
+                    s += Convert.ToString(rnd.Next(0, 9));
                 }
                 else if (flag == 1)
                 {
-                    s = s + Convert.ToString(Convert.ToChar(rnd.Next(97, 123)));
+                    s += Convert.ToString(Convert.ToChar(rnd.Next(97, 123)));
                 }
                 else if (flag == 2)
                 {
-                    s = s + Convert.ToString(Convert.ToChar(rnd.Next(65, 90)));
+                    s += Convert.ToString(Convert.ToChar(rnd.Next(65, 90)));
                 }
 
             }
@@ -89,7 +79,7 @@ namespace User_Test
             //запись в массив
             Form3 form3 = new Form3();
             form3.Show();
-            this.Close();
+            Close();
 
         }
 
@@ -97,7 +87,7 @@ namespace User_Test
         {
             Form2 form2 = new Form2();
             form2.Show();
-            this.Close();
+            Close();
         }
     }
 }

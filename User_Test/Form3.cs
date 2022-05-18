@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -38,7 +31,6 @@ namespace User_Test
                     {
                         flag = true;
                         user_name = mas[0];
-                        //MessageBox.Show(user_name);
                         break;
                         
                     }
@@ -46,11 +38,8 @@ namespace User_Test
                     {
                         Form2 form2 = new Form2();
                         form2.Show();
-                        this.Hide();
+                        Hide();
                     }
-
-
-
                 }
 
                 sr.Close();
@@ -58,14 +47,14 @@ namespace User_Test
                 {
                     Form4 form4 = new Form4(user_name);
                     form4.Show();
-                    this.Hide();
+                    Hide();
                 }
                 else
                 {
                     MessageBox.Show("reg");
                     Form2 form2 = new Form2();
                     form2.Show();
-                    this.Hide();
+                    Hide();
                 }
             }
         }
@@ -74,7 +63,7 @@ namespace User_Test
         {
             Form2 form2 = new Form2();
             form2.Show();
-            this.Close();
+            Close();
         }
     }
 }
